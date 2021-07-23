@@ -1,0 +1,92 @@
+body {
+  /* height: 100vh; */
+  padding: 11px;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.main {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: repeat(auto, 6);
+  grid-template-areas:
+    "header header"
+    "menu menu"
+    "col1 col3 "
+    "col2 col2"
+    "footer footer";
+}
+
+header {
+  grid-area: header;
+  background-color: lightblue;
+  font-size: 33px;
+  text-align: center;
+  padding: 2rem;
+  font-weight: bold;
+  color: red;
+  text-shadow: 2px 2px gray;
+}
+nav {
+  grid-area: menu;
+  background-color: darkslategrey;
+  text-align: left;
+  padding: 2rem;
+}
+nav a {
+  color: #ffffff;
+  border-right: 1px solid black;
+  padding: 2rem;
+}
+#youtube {
+  background-color: red;
+  color: #ffffff;
+}
+
+#facebook {
+  background-color: blue;
+  color: #ffffff;
+}
+#twitter {
+  background-color: lightskyblue;
+  color: #ffffff;
+}
+section#col1 {
+  grid-area: col1;
+  background-color: #9d9d9d;
+  padding: 1rem;
+  height: 200px;
+}
+section#col2 {
+  grid-area: col2;
+  background-color: #bbbbbb;
+  padding: 1rem;
+  height: 200px;
+}
+section#col3 {
+  grid-area: col3;
+  background-color: #d6d6d6;
+  padding: 1rem;
+  height: 200px;
+}
+footer {
+  grid-area: footer;
+  background-color: darkslategrey;
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem;
+  font-size: 20px;
+}
+
+@media only screen and (min-width: 600px) {
+  .main {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 33% 33% auto;
+    grid-template-rows: 15% 12% 46% 10%;
+    grid-template-areas:
+      "header header header"
+      "menu menu menu"
+      "col1 col2 col3"
+      "footer footer footer";
+  }
+}
